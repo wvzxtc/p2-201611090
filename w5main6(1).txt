@@ -1,0 +1,19 @@
+start
+:hey first guy what's your choice? please input only between r
+s p
+how about you,next guy;
+:define r=1.0, s=2.0, p=4.0
+define alpha=number(firstguy)/number(nextguy);
+if (alpha=0.5)
+  :firstguy win!;
+elseif (alpha=1)
+  :darw!;
+elseif (alpha=0.25)
+  :nextguy win!;
+elseif (alpha=2)
+  :nextguy win!;
+elseif (alpha=4)
+  :firstguy win!;
+endif
+:print "who is win or draw";
+stop
