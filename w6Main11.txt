@@ -1,0 +1,11 @@
+start
+
+:input your year;
+
+if (year is divided by 4 and isn't divided by 100 or year is divided by 400) then (yes)
+:print yes;
+else ()
+:print no;
+endif
+
+stop
