@@ -1,0 +1,14 @@
+﻿start
+
+:c1 = select one number random in range (1,100);
+:p1 = input one number;
+
+if (c1>p1)
+:up;
+elseif (c1<p1)
+:down;
+else
+:correct;
+endif
+
+stop
