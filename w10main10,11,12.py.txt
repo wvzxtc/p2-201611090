@@ -1,0 +1,111 @@
+﻿def Coffee():
+
+    allData=list()
+
+    allData=[["Coffee","Water","Milk","Icecream"],
+    ["Espresso","No","No","No"],
+    ["Long Black","Yes","No","No"],
+    ["Flat White","No","Yes","No"],
+    ["Cappuccino","No","Yes - Frothy","No"],
+    ["Affogato","No","No","Yes"]]
+
+    for i in range(1,len(allData)):
+        print allData[i]
+    Data=allData[1:]
+
+    milk=0
+    nomilk=0
+
+    for c in Data:
+        if c[2]=="No":
+            nomilk=nomilk+1
+        else:
+            milk=milk+1
+
+    print "milk :",float(milk)/len(Data)*100,"%"," nomilk :",float(nomilk)/len(Data)*100,"%"
+
+
+def Grade():
+    result=list()
+    result=[['English', 100], ['Math', 200], ['English', 200], ['Math', 200], ['English', 100], ['Math', 300]]
+    sum_E=0
+    sum_M=0
+    len_E=0
+    len_M=0
+    for i in result:
+        if i[0]=='English':
+            sum_E=sum_E+i[1]
+            len_E=len_E+1
+        else:
+            sum_M=sum_M+i[1]
+            len_M=len_M+1
+    average_E=sum_E/len_E
+    average_M=sum_M/len_M
+    print ("English Sum: ", sum_E)
+    print ("Math Sum: ", sum_M)
+    print ("English Average: ", average_E)
+    print ("Math Average: ", average_E)
+
+def Letitbe():
+    lyrics=list()
+    lyrics=['When I find myself in times of trouble',
+    'Mother Mary comes to me',
+    'Speaking words of wisdom let it be',
+    'And in my hour of darkness',
+    'She is standing right in front of me',
+    'Speaking words of wisdom let it be',
+    'Let it be let it be',
+    'Let it be let it be',
+    'Whisper words of wisdom let it be',
+    'And when the broken-hearted people',
+    'Living in the world agree',
+    'There will be an answer let it be',
+    'For though they may be parted',
+    'There is still a chance that they will see',
+    'There will be an answer let it be',
+    'Let it be let it be',
+    'Let it be let it be',
+    'Yeah there will be an answer let it be',
+    'Let it be let it be',
+    'Let it be let it be',
+    'Whisper words of wisdom let it be',
+    'Let it be let it be',
+    'Ah let it be yeah let it be',
+    'Whisper words of wisdom let it be',
+    'And when the night is cloudy',
+    'There is still a light that shines on me',
+    'Shine on until tomorrow let it be',
+    'I wake up to the sound of music',
+    'Mother Mary comes to me',
+    'Speaking words of wisdom let it be',
+    'Let it be let it be',
+    'Let it be yeah let it be',
+    'Oh there will be an answer let it be',
+    'Let it be let it be',
+    'Let it be yeah let it be',
+    'Whisper words of wisdom let it be']
+    d=dict()
+    for line in lyrics:
+        for i in line.split():
+            if i not in d:
+                d[c]=1
+            else:
+                d[c]=d[c]+1
+    print d
+    for c in range(len(d)):
+        if d.values()[c]>=20:
+            print d.keys()[c],d.values()[c]
+
+def lab10():
+    Coffee()
+    Grade()
+    Letitbe()
+
+def main():
+    lab10()
+main()
+
+if __name__=="__main__":
+    main()
+
+wn=raw_input()
