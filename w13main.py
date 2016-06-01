@@ -1,46 +1,44 @@
-﻿import time
+﻿
+import turtle
+t1=turtle.Turtle()
+wn=turtle.Screen()
 def a():
-    filetwo=open('output.txt', 'w')
-    line1='first line\n'
-    filetwo.write(line1)
-    line2='second line\n'
-    filetwo.write(line2)
-    line3='third line'
-    filetwo.write(line3)
-    filetwo.close()
-    msg='[KBK edited {0}]'.format(time.strftime('%Y.%m.%d , %H:%M:%S'))
-    fin=open('output.txt', 'r')
-    fout=open('outputUpper.txt','w')
-    for line in fin:
-        words=line.split()
-        fout.write(msg)
-        fout.write('\t')
-        for word in words:
-            if word == 'line':
-                fout.write('\t')    
-                word=word.upper()
-            fout.write(word)
-        fout.write('\n')
-    fin.close()
-    fout.close()
-    
-def b():
-    data=[1,2,3,4,5,6,7,8,9,10]
-    fout=open('number.txt', 'w')
-    for i in data:
-        str="{0}\t".format(i)
-        fout.write(str)
-        if i%2==0:
-            fout.write('\n')
-    fout.close()
-
-def lab12():
+	fin2.close()
+	except Exception as e:
+	print e
+homework()
+aFile=raw_input("Input filename ex)recoords.txt: ")
+def getCoordsFromFile(aFile):
+	filehome=open(aFile)
+	coords=list()
+		coords.append([(line1[0],line1[1]), (line1[2],line1[3].strip())])
+	filehome.close()
+	return coords
+coords=getCoordsFromFile(aFile)
+def drawSquareWithCoords(coords):
+	for coord in coords:
+		x1=int(coord[0][0])
+		x2=int(coord[1][0])
+		y1=int(coord[0][1])
+		y2=int(coord[1][1])
+	print x1,y1,x2,y2
+	t1.penup()
+  	t1.goto(x1,y1)
+	t1.pendown()
+	for i in range(0,4):
+		t1.fd(x1-x2)
+		t1.rt(90)
+drawSquareWithCoords(coords)
+wn.exitonclick()
+def lab13():
     a()
-    b()
-
+    aFile=raw_input("Input filename ex)recoords.txt: ")
+    getCoordsFromFile(aFile)
+    coords=getCoordsFromFile(aFile)
+    drawSquareWithCoords(coords)
 def main():
-    lab12()
-    raw_input()
+    lab13()
+    wn.exitonclick()
 
 if __name__=="__main__":
-    main()
+        main()
